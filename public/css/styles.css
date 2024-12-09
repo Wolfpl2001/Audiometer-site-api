@@ -1,0 +1,97 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body covers at least the viewport height */
+
+}
+
+
+.container {
+    width: 100%; /* Set container width to 100% */
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allow the container to grow to fill available space */
+    background-image: url('../images/hearing-test.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+}
+
+header {
+    width: 100%; /* Set header width to 100% */
+    background-color: #007bff;
+    ;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.login_button {
+    text-decoration: none;
+}
+
+.login_button a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #73b6ff;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+.content {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    padding: 20px;
+    text-align: center; /* Center text horizontally */
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.content p {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #333;
+    max-width: 40%; /* Limit text width to 40% of parent container */
+font-weight: bold;
+}
+
+
+
+
+footer {
+    background-color: #007bff;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}

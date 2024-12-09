@@ -1,0 +1,199 @@
+/* CSS Variables for theme consistency */
+:root {
+    --primary-color: #3498db;
+    --primary-hover: #2980b9;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --background-color: #f8f9fa;
+    --container-background: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --focus-outline: #2980b9;
+    --transition-time: 0.3s;
+    --border-radius: 10px;
+}
+
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body, html {
+    height: 100%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header styles */
+.header {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 15px 30px;
+    color: #fff;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: background-color var(--transition-time) ease;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header .btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;  /* Enhanced readability */
+    font-weight: bold;  /* Makes text stand out */
+    cursor: pointer;
+    transition: background-color var(--transition-time) ease, transform var(--transition-time) ease, box-shadow var(--transition-time) ease;
+    text-decoration: none;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.header .btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px var(--shadow-color); /* More prominent shadow on hover */
+}
+
+.header .btn:focus {
+    outline: 3px solid var(--focus-outline);
+    box-shadow: 0 0 8px var(--focus-outline); /* Focus state with glowing effect */
+}
+
+.header .btn:active {
+    transform: translateY(-1px); /* Subtle effect for button press */
+    box-shadow: 0 3px 5px var(--shadow-color); /* Less shadow to simulate button being pressed */
+}
+
+
+/* Container styles */
+.container {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Input Container */
+.input-container {
+    height: 25%;
+    background: var(--container-background);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: box-shadow var(--transition-time) ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.input-container:hover {
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+.input-container .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.input-container label {
+    flex: 1;
+    color: #555;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.input-container select,
+.input-container button {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    background-color: #f9f9f9;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color var(--transition-time) ease, box-shadow var(--transition-time) ease;
+}
+
+.input-container select:focus,
+.input-container button:focus {
+    outline: none;
+    border-color: var(--focus-outline);
+    box-shadow: 0 0 5px var(--focus-outline);
+}
+
+.input-container button:hover {
+    background-color: #eee;
+}
+
+.input-container .input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-container .input-row input,
+.input-container .input-row select {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    background-color: #f9f9f9;
+    color: var(--text-color);
+    transition: border-color var(--transition-time) ease, box-shadow var(--transition-time) ease;
+}
+
+.input-container .input-row input:focus,
+.input-container .input-row select:focus {
+    outline: none;
+    border-color: var(--focus-outline);
+    box-shadow: 0 0 5px var(--focus-outline);
+}
+
+.input-container .input-row label {
+    flex: 1;
+    margin-right: 10px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* Chart Container */
+.chart {
+    height: 60%;
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 25%;
+    transition: transform var(--transition-time) ease;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .chart {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .input-container {
+        height: auto;
+    }
+}

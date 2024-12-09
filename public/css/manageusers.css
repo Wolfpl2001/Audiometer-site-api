@@ -1,0 +1,224 @@
+/* CSS Variables for theme consistency */
+:root {
+    --primary-color: #3498db;
+    --primary-hover: #2980b9;
+    --secondary-color: #2c3e50;
+    --text-color: #333;
+    --background-color: #f8f9fa;
+    --container-background: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --focus-outline: #2980b9;
+    --transition-time: 0.3s;
+    --border-radius: 10px;
+}
+
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body, html {
+    height: 100%;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header styles */
+.header {
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    padding: 15px 30px;
+    color: #fff;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: background-color var(--transition-time) ease;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header .btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;  /* Enhanced readability */
+    font-weight: bold;  /* Makes text stand out */
+    cursor: pointer;
+    transition: background-color var(--transition-time) ease, transform var(--transition-time) ease, box-shadow var(--transition-time) ease;
+    text-decoration: none;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.header .btn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px var(--shadow-color); /* More prominent shadow on hover */
+}
+
+.header .btn:focus {
+    outline: 3px solid var(--focus-outline);
+    box-shadow: 0 0 8px var(--focus-outline); /* Focus state with glowing effect */
+}
+
+.header .btn:active {
+    transform: translateY(-1px); /* Subtle effect for button press */
+    box-shadow: 0 3px 5px var(--shadow-color); /* Less shadow to simulate button being pressed */
+}
+
+/* Table container styles */
+.user-list {
+    padding: 20px 30px;
+    background-color: var(--container-background);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    border-radius: var(--border-radius);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Table styles */
+.user-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table header styles */
+.user-list th {
+    background-color: var(--secondary-color);
+    color: #fff;
+    text-align: left;
+    padding: 12px 15px;
+    font-size: 1rem;
+}
+
+/* Table body styles */
+.user-list td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+/* Table row hover effect */
+.user-list tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Action buttons in the table */
+.user-list .btn {
+    padding: 8px 15px;
+    margin: 0 5px;
+    font-size: 0.9rem;
+}
+
+/* Table responsive design */
+@media (max-width: 768px) {
+    .user-list table, .user-list th, .user-list td {
+        display: block;
+        width: 100%;
+    }
+    .user-list th, .user-list td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .user-list th::before, .user-list td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+/* Form container styles */
+.edit-user-form {
+    padding: 20px 30px;
+    background-color: var(--container-background);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    border-radius: var(--border-radius);
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Form row styles */
+.edit-user-form .row {
+    margin-bottom: 15px;
+}
+
+/* Form label styles */
+.edit-user-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Form input styles */
+.edit-user-form input[type="text"],
+.edit-user-form input[type="password"],
+.edit-user-form input[type="checkbox"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    transition: border-color var(--transition-time) ease, box-shadow var(--transition-time) ease;
+}
+
+/* Form input focus styles */
+.edit-user-form input[type="text"]:focus,
+.edit-user-form input[type="password"]:focus,
+.edit-user-form input[type="checkbox"]:focus {
+    border-color: var(--focus-outline);
+    box-shadow: 0 0 8px var(--focus-outline);
+    outline: none;
+}
+
+/* Checkbox alignment */
+.edit-user-form input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+/* Form button styles */
+.edit-user-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transition-time) ease, transform var(--transition-time) ease, box-shadow var(--transition-time) ease;
+    box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+/* Form button hover styles */
+.edit-user-form button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px var(--shadow-color);
+}
+
+/* Form button focus styles */
+.edit-user-form button:focus {
+    outline: 3px solid var(--focus-outline);
+    box-shadow: 0 0 8px var(--focus-outline);
+}
+
+/* Form button active styles */
+.edit-user-form button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 5px var(--shadow-color);
+}

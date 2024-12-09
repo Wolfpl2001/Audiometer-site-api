@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PresetXMLTree Version="2">
+    <Preset Name="Test" GenericType="EQ10">
+        <PresetHeader>
+            <PluginName>Q10</PluginName>
+            <PluginVersion>7.1.0.4</PluginVersion>
+            <ReadOnly>False</ReadOnly>
+        </PresetHeader>
+        <MessageToShell/>
+        <PresetData Setup="CURRENT">
+            <Parameters Type="RealWorld">
+            1 0 2.0 125 7
+            1 0 -3.0 250 7
+            1 0 -1.2 500 7
+            1 0 0.0 750 7
+            1 0 -3.0 1000 7
+            1 0 2.0 1500 7
+            1 0 -3.0 2000 7
+            1 0 -3.0 3000 7
+            1 0 2.0 4000 7
+            1 0 0.0 6000 7
+            1 0 6.0 8000 7
+            1 0 -3.0 125 7
+            1 0 2.0 250 7
+            1 0 1.2 500 7
+            1 0 2.0 750 7
+            1 0 2.0 1000 7
+            1 0 2.0 1500 7
+            1 0 -6.0 2000 7
+            1 0 -3.0 3000 7
+            1 0 -3.0 4000 7
+            1 0 2.0 6000 7
+            1 0 6.0 8000 7
+        -12 -12 -6 -6 *
+        * * * * *
+        0 0 0 0 *
+            </Parameters>
+        </PresetData>
+    </Preset>
+</PresetXMLTree>
